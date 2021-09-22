@@ -16,7 +16,7 @@ jobs:
     - name: ls
       run: ls -lah
     - name: configure
-      run: ./configure
+      run: ./00_LBVorbereitung/configure
     - name: make
       run: make
     - name: make check
