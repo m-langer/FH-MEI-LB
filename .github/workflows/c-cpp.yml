@@ -15,11 +15,15 @@ jobs:
     - uses: actions/checkout@v2
     - name: ls
       run: ls -lah
-    - name: configure
-      run: ./00_LBVorbereitung/configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: build run
+      run: |
+        gcc ./00_LBVorbereitung/00_Fragen.cpp -o test.exe
+        ./test.exe
+    #- name: configure
+     # run: ./00_LBVorbereitung/configure
+    #- name: make
+     # run: make
+    #- name: make check
+     # run: make check
+    #- name: make distcheck
+     # run: make distcheck
